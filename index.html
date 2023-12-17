@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ログインフォーム</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="logo.png" alt="ロゴ" class="logo">
+    <div class="login-form">
+        <form id="login">
+            <h2>ログイン</h2>
+            <div class="form-group">
+                <!-- ユーザー名の入力フィールドにプレースホルダーを追加 -->
+                <input type="text" id="username" name="username" placeholder="XELA ID">
+            </div>
+            <div class="form-group">
+                <!-- パスワードの入力フィールドにプレースホルダーを追加 -->
+                <input type="password" id="password" name="password" placeholder="パスワード">
+            </div>
+            <button type="submit">ログイン</button>
+        </form>
+        <div class="checkmark-container" id="checkmark-container">
+            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/>
+                <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+            </svg>
+        </div>
+    </div>
+    
+
+
+    <!-- JavaScriptファイルの関連付け -->
+    <script src="script.js"></script>
+</body>
+</html>

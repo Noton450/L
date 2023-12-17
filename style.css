@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('wallpaper.jpg');
+    background-size: cover;
+}
+
+.login-form {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%; /* フォームの幅をビューポートに基づいて設定 */
+    max-width: 400px; /* 最大幅を設定 */
+    margin: auto; /* 水平方向の中央揃え */
+}
+.logo {
+    position: absolute;
+    top: 0px;
+    left: 15px;
+    width: 200px; /* ロゴのサイズを適宜調整 */
+}
+.login-form h2 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%; /* 入力フィールドの幅を親要素に合わせて100%に設定 */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* パディングとボーダーを幅に含める */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+.checkmark-container {
+    display: none; /* 初期状態では非表示 */
+    position: absolute; /* 絶対位置指定 */
+    top: 64%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100px;
+    z-index: 10;
+    /* フェードアウトスタイルを削除または修正 */
+}
+
+
+
+.checkmark {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #4bb543;
+    stroke-miterlimit: 10;
+    box-shadow: inset 0px 0px 0px #4bb543;
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+    margin-top: -100px; /* 位置を調整 */
+}
+
+.checkmark-circle {
+    stroke: #4bb543;
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.checkmark-check {
+    stroke: white; /* 白いチェックマーク */
+    stroke-width: 2;
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+.form-group.fade-out {
+    animation: fadeOut 0.8s forwards;
+}
+.login-form .fade-out {
+    animation: fadeOut 0.8s forwards;
+}
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes scale {
+    0%, 100% {
+        transform: none;
+    }
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+    }
+}
+
+@keyframes fill {
+    100% {
+        box-shadow: inset 0px 0px 0px 30px #4bb543;
+    }
+}
+.checkmark-container.fade-in {
+    display: flex;
+    animation: fadeIn 0.8s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
