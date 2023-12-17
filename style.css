@@ -146,3 +146,37 @@ button:hover {
         visibility: hidden;
     }
 }
+#error-message {
+    background-color: orange;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-align: center;
+    display: none; /* 初期状態では非表示 */
+}
+
+.hidden {
+    display: none;
+}
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.blink {
+    animation: blink 0.5s ease-in-out 1; /* 1秒間の点滅を2回繰り返す */
+}
+@media screen and (max-width: 600px) {
+    .login-form {
+        width: 100%; /* スマートフォンではフォームの幅を画面いっぱいに */
+        margin: 10px; /* 余白を調整 */
+        padding: 15px; /* パディングを調整 */
+    }
+
+    .logo {
+        width: 50px; /* スマートフォンではロゴのサイズを小さく */
+    }
+
+    /* 必要に応じて他のスタイルも調整 */
+}
