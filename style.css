@@ -180,3 +180,14 @@ button:hover {
 
     /* 必要に応じて他のスタイルも調整 */
 }
+.fade-out {
+    animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
