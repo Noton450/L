@@ -17,6 +17,11 @@ document.getElementById('login').addEventListener('submit', function(event) {
         var checkmarkContainer = document.getElementById('checkmark-container');
         checkmarkContainer.style.display = 'flex';
         errorMessage.style.display = 'none';
+        setTimeout(function() {
+            var form = document.querySelector('.login-form');
+            form.classList.add('fade-out');
+            checkmarkContainer.classList.add('fade-out');
+        }, 1500); // 1.5秒の遅延
     } else {
         document.getElementById('error-message').style.display = 'block';
         errorMessage.style.display = 'block';
